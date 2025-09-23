@@ -59,16 +59,15 @@
     document.getElementById('checkout').addEventListener('click', ()=>{
       if(cart.items.length === 0) return alert('El carrito está vacío');
       // demo: finalizar compra
-      const summary = calculateTotals();
-      alert(`Pedido finalizado. Total: €${summary.total.toFixed(2)}\nGracias por su compra 😊`);
-      // limpiar carrito
-      cart = {items:[], promoCodeApplied:null}; saveCart(); renderCartCount(); renderCartItems(); closeCart(); renderTab('menu');
+	  renderCheckoutForm();
+	  closeCart();
     });
 
     // close with ESC
     document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeCart(); });
   }
 
+  
   function renderTab(tab){
     const main = document.getElementById('main-content');
     main.innerHTML = '';
@@ -76,6 +75,80 @@
     else if(tab==='promos') renderPromos(main);
     else if(tab==='restaurants') renderRestaurants(main);
   }
+  
+  /*...............................Render: Compra-----------------------------*/
+  
+  function renderCheckoutForm(){
+    const main = document.getElementById('main-content');
+    main.innerHTML = `
+      <h2>Finalizar compra</h2>
+      <form id="delivery-form" class="checkout-form">
+        <label><input type="radio" name="delivery" value="domicilio" checked> Envío a domicilio</label>
+        <div id="address-input">
+          <input type="text" id="shipping-address" placeholder="Introduce tu dirección">
+        </div>
+        <label><input type="radio" name="delivery" value="recogida"> Recogida en restaurante</label>
+        <div id="restaurant-select" style="display:none">
+          <select id="pickup-restaurant">
+            ${RESTAURANTS.map((r,i)=>`<option value="${r.address}">${r.name} - ${r.address}</option>`).join('')}
+          </select>
+        </div>
+        <button type="submit" class="btn add" style="margin-top:12px">Confirmar pedido</button>
+      </form>
+    `;
+
+    // alternar campos según opción
+    main.querySelectorAll('input[name="delivery"]').forEach(r=>{
+      r.addEventListener('change', ()=>{
+        document.getElementById('address-input').style.display = r.value==="domicilio"?"block":"none";
+        document.getElementById('restaurant-select').style.display = r.value==="recogida"?"block":"none";
+      });
+    });
+
+    main.querySelector('#delivery-form').addEventListener('submit', e=>{
+      e.preventDefault();
+      const mode = main.querySelector('input[name="delivery"]:checked').value;
+      let address = mode==="domicilio" ? document.getElementById('shipping-address').value.trim()
+                                       : document.getElementById('pickup-restaurant').value;
+      if(!address) return alert("Introduce una dirección o selecciona un restaurante");
+      renderOrderTracking(address, mode);
+      cart = {items:[], promoCodeApplied:null};
+      saveCart(); renderCartCount();
+    });
+  }
+  
+  /*------------------------------Render:seguimiento--------------------------*/
+  function renderOrderTracking(address, mode){
+    const main = document.getElementById('main-content');
+    main.innerHTML = `
+      <h2>Seguimiento de pedido</h2>
+      <p>${mode==="domicilio" ? "Enviado a domicilio:" : "Recogida en:"} <strong>${escapeHtml(address)}</strong></p>
+      <div class="map-container">
+        <iframe
+          width="100%" height="300" style="border:0" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed"></iframe>
+      </div>
+      <div class="order-status">
+        <div id="status-text">Preparando pedido...</div>
+        <div class="status-bar"><div id="status-progress"></div></div>
+      </div>
+    `;
+
+    const steps = ["Preparando pedido","Listo para recoger","En reparto","Entregado"];
+    let idx = 0;
+    const progress = document.getElementById("status-progress");
+    const text = document.getElementById("status-text");
+
+    function update(){
+      text.textContent = steps[idx];
+      progress.style.width = ((idx+1)/steps.length*100)+"%";
+      idx++;
+      if(idx<steps.length){ setTimeout(update,60000); } // avanza cada minuto
+    }
+    update();
+  }
+
 
   /* ----------------------------- Render: Menú ----------------------------- */
   function renderMenu() {

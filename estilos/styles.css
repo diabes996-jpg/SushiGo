@@ -3,26 +3,99 @@
       --blanco: #ffffff;
       --amarillo: #f5e27a; /* amarillo huevo */
       --texto: #222;
-      --fondo: #fffaf6;
+      --fondo: rgba(255,247,240,0.6);
       --accent-dark: #8b0000;
       --card-bg: #ffffff;
       --max-width: 1100px;
     }
+    
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--texto);background:var(--fondo)}
-    .container{max-width:var(--max-width);margin:0 auto;padding:20px}
+    
+    html{
+    	background: url("../imagenes/fondo.jpg");
+		background-repeat: no-repeat; 
+		background-position: center center fixed;    			
+		background-size: cover;
+		position: relative;		
+    }
+    
+    body{
+		height:100%;
+		margin:0;
+		font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+		color:var(--texto);
+		background:var(--fondo);		
+		}				
+				
+    .container{
+    	max-width:var(--max-width);
+    	margin:0 auto;
+    	padding:20px
+    	}
 
     /* Header */
-    header.site-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px;border-radius:12px;background:linear-gradient(90deg,var(--rojo),var(--amarillo));color:var(--blanco)}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo-sq{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--blanco);padding:6px}
-    .logo-sq img{width:110px;height:110px;margin-top: 10px;}
+    header.site-header{
+    	display:flex;
+    	align-items:center;
+    	justify-content:space-between;
+    	gap:16px;
+    	padding:18px;
+    	border-radius:12px;
+    	background:linear-gradient(90deg,var(--rojo),var(--amarillo));
+    	color:var(--blanco)
+    	}
+    	
+    .brand{
+    	display:flex;
+    	align-items:center;
+    	gap:12px
+    	}
+    	
+    .logo-sq{
+    	width:56px;
+    	height:56px;
+    	border-radius:10px;
+    	display:flex;
+    	align-items:center;
+    	justify-content:center;
+    	background:var(--blanco);
+    	padding:6px
+    	}
+    	
+    .logo-sq img{
+    	width:110px;
+    	height:110px;
+    	margin-top: 10px;
+    	margin-right:2px;
+    	}
+    	
     .brand h1{margin:0;font-size:18px}
+    
     nav.main-nav{display:flex;gap:8px;align-items:center}
-    .tab{background:transparent;border:2px solid rgba(255,255,255,0.2);color:var(--blanco);padding:8px 12px;border-radius:10px;cursor:pointer}
-    .tab.active{background:rgba(255,255,255,0.12);box-shadow:0 4px 10px rgba(0,0,0,0.12)}
+    
+    .tab{
+    	background:transparent;
+    	border:2px solid rgba(255,255,255,0.2);
+    	color:var(--blanco);
+    	padding:8px 12px;
+    	border-radius:10px;
+    	cursor:pointer
+    	}
+    	
+    .tab.active{
+    	background:rgba(255,255,255,0.12);
+    	box-shadow:0 4px 10px rgba(0,0,0,0.12)}
+    	
     #open-cart{position:relative}
-    #open-cart .count{background:var(--blanco);color:var(--rojo);border-radius:999px;padding:2px 8px;margin-left:8px;font-weight:600}
+    
+    #open-cart .count{
+    	background:var(--blanco);
+    	color:var(--rojo);
+    	border-radius:999px;
+    	padding:2px 8px;
+    	margin-left:8px;
+    	font-weight:600
+    	}
 
     /* Main */
     main.main-content{margin-top:18px; overflow-y: auto; height: 550px;}
@@ -88,8 +161,22 @@
     .promo-row{display:flex;gap:8px;margin-top:8px}
     input[type="text"], input[type="number"]{padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.08)}
 
-    footer.site-footer{margin-top:38px;padding:16px;border-radius:10px;background:#fff7ea;display:flex;justify-content:space-between;align-items:center}
-    .social-icons img{width:22px;height:22px;margin-left:8px;opacity:0.9}
+    footer.site-footer{
+    	margin-top:38px;
+    	padding:16px;
+    	border-radius:10px;
+    	background: rgba(255, 247, 234, 0.6);
+    	display:flex;
+    	justify-content:space-between;
+    	align-items:center
+    	}
+    	
+    .social-icons img{
+    	width:22px;
+    	height:22px;
+    	margin-left:8px;
+    	opacity:0.9
+    	}    		
 
     /* small helpers */
     .muted{color:rgb(58, 58, 58);font-size:13px}
@@ -114,4 +201,3 @@
 	  object-fit: cover;
 	  border-radius: 12px;
 	}
-    
