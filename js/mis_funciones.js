@@ -1,79 +1,79 @@
 /* ----------------------------- Datos iniciales ----------------------------- */
-  const PRODUCTS = [
-    {id:'p1',name:'Sushi Mix 12 piezas',category:'platos',price:12.5,desc:'Nigiri y maki surtidos',img:'imagenes/platos/12_mix.jpg'},
-    {id:'p2',name:'Tempura Roll',category:'platos',price:9.0,desc:'Roll crujiente con tempura',img:'imagenes/platos/tempura_roll.jpg'},
-    {id:'p3',name:'California Roll',category:'platos',price:8.5,desc:'Aguacate y cangrejo',img:'imagenes/platos/california_roll.png'},
-    {id:'p4',name:'Poké Bowl',category:'platos',price:10.5,desc:'Arroz, atún marinado y toppings',img:'imagenes/platos/poke.jpg'},
-	{id:'p5',name:'Maki 4 piezas',category:'platos',price:6.0,desc:'Arroz, aguacate y alga',img:'imagenes/platos/maki.jpg'},
-	{id:'p6',name:'Nigiri 4 piezas',category:'platos',price:6.0,desc:'Arroz y pez mantuequilla',img:'imagenes/platos/nigiri.jpg'},
-	{id:'p7',name:'Sashimi',category:'platos',price:11.0,desc:'atún, salmón y pulpo',img:'imagenes/platos/sashimi.jpg'},
-	{id:'p8',name:'Tartar',category:'platos',price:10.5,desc:'Atun o Salmon',img:'imagenes/platos/tartar.jpg'},
-    {id:'b1',name:'Agua 500ml',category:'bebidas',price:1.5,desc:'Agua mineral embotellada o de grifo',img:'imagenes/bebidas/agua.jpg'},
-    {id:'b2',name:'Refresco 330ml',category:'bebidas',price:2.0,desc:'Lata refrigerada de ColaLoca, Llanta de Naranja, Noesté, Aguarrius y Sepsi',img:'imagenes/bebidas/refrescos.jpg'},
-	{id:'b3',name:'Sake 500ml',category:'bebidas',price:8.5,desc:'Sake japones',img:'imagenes/bebidas/sake.jpg'},
-	{id:'b4',name:'Estrella Galicia 300ml',category:'bebidas',price:3.0,desc:'Cerveza para la cabeza',img:'imagenes/bebidas/cerveza.jpg'},
-	{id:'b5',name:'Té macha',category:'bebidas',price:3.5,desc:'Té tradicional',img:'imagenes/bebidas/té.jpg'},
-    {id:'post1',name:'Mochi Matcha',category:'postres',price:3.5,desc:'Mochi relleno de helado',img:'imagenes/postres/mochi.jpg'},
-    {id:'post2',name:'Dorayaki',category:'postres',price:2.8,desc:'Pastel japonés relleno',img:'imagenes/postres/dorayakis.jpg'},
-	{id:'post3',name:'Mitarashi dango',category:'postres',price:5.0,desc:'Brocheta de bambú con diversas bolas de masa dulce',img:'imagenes/postres/dango.jpg'},
-	{id:'post4',name:'Momiji Manjû',category:'postres',price:6.0,desc:'Pastelitos de huevos, azúcar, almíbar y azúcar granuladoonés relleno',img:'imagenes/postres/manju.jpg'},
-	{id:'post5',name:'Taiyaki',category:'postres',price:4.5,desc:'dulce de harina de trigo relleno de frijoles rojos hervidos y mezclado con azúcar',img:'imagenes/postres/taiyaki.jpg'}
+  const productos = [
+    {id:'p1',name:'Sushi Mix 12 piezas',categoria:'platos',precio:12.5,desc:'Nigiri y maki surtidos',img:'imagenes/platos/12_mix.jpg'},
+    {id:'p2',name:'Tempura Roll',categoria:'platos',precio:9.0,desc:'Roll crujiente con tempura',img:'imagenes/platos/tempura_roll.jpg'},
+    {id:'p3',name:'California Roll',categoria:'platos',precio:8.5,desc:'Aguacate y cangrejo',img:'imagenes/platos/california_roll.png'},
+    {id:'p4',name:'Poké Bowl',categoria:'platos',precio:10.5,desc:'Arroz, atún marinado y toppings',img:'imagenes/platos/poke.jpg'},
+	{id:'p5',name:'Maki 4 piezas',categoria:'platos',precio:6.0,desc:'Arroz, aguacate y alga',img:'imagenes/platos/maki.jpg'},
+	{id:'p6',name:'Nigiri 4 piezas',categoria:'platos',precio:6.0,desc:'Arroz y pez mantuequilla',img:'imagenes/platos/nigiri.jpg'},
+	{id:'p7',name:'Sashimi',categoria:'platos',precio:11.0,desc:'atún, salmón y pulpo',img:'imagenes/platos/sashimi.jpg'},
+	{id:'p8',name:'Tartar',categoria:'platos',precio:10.5,desc:'Atun o Salmon',img:'imagenes/platos/tartar.jpg'},
+    {id:'b1',name:'Agua 500ml',categoria:'bebidas',precio:1.5,desc:'Agua mineral embotellada o de grifo',img:'imagenes/bebidas/agua.jpg'},
+    {id:'b2',name:'Refresco 330ml',categoria:'bebidas',precio:2.0,desc:'Lata refrigerada de ColaLoca, Llanta de Naranja, Noesté, Aguarrius y Sepsi',img:'imagenes/bebidas/refrescos.jpg'},
+	{id:'b3',name:'Sake 500ml',categoria:'bebidas',precio:8.5,desc:'Sake japones',img:'imagenes/bebidas/sake.jpg'},
+	{id:'b4',name:'Estrella Galicia 300ml',categoria:'bebidas',precio:3.0,desc:'Cerveza para la cabeza',img:'imagenes/bebidas/cerveza.jpg'},
+	{id:'b5',name:'Té macha',categoria:'bebidas',precio:3.5,desc:'Té tradicional',img:'imagenes/bebidas/té.jpg'},
+    {id:'post1',name:'Mochi Matcha',categoria:'postres',precio:3.5,desc:'Mochi relleno de helado',img:'imagenes/postres/mochi.jpg'},
+    {id:'post2',name:'Dorayaki',categoria:'postres',precio:2.8,desc:'Pastel japonés relleno',img:'imagenes/postres/dorayakis.jpg'},
+	{id:'post3',name:'Mitarashi dango',categoria:'postres',precio:5.0,desc:'Brocheta de bambú con diversas bolas de masa dulce',img:'imagenes/postres/dango.jpg'},
+	{id:'post4',name:'Momiji Manjû',categoria:'postres',precio:6.0,desc:'Pastelitos de huevos, azúcar, almíbar y azúcar granuladoonés relleno',img:'imagenes/postres/manju.jpg'},
+	{id:'post5',name:'Taiyaki',categoria:'postres',precio:4.5,desc:'dulce de harina de trigo relleno de frijoles rojos hervidos y mezclado con azúcar',img:'imagenes/postres/taiyaki.jpg'}
   ];
 
-  const RESTAURANTS = [
-    {name:'SushiGo Centro',address:'Calle Mayor, 12, 28013 Madrid',phone:'+34 91 123 45 67'},
-    {name:'SushiGo Salamanca',address:'Calle de Serrano, 54, 28006 Madrid',phone:'+34 91 234 56 78'},
-    {name:'SushiGo Vallecas',address:'Av. de la Albufera, 120, 28038 Madrid',phone:'+34 91 345 67 89'}
+  const restaurantes = [
+    {name:'SushiGo Centro',direccion:'Calle Mayor, 12, 28013 Madrid',phone:'+34 91 123 45 67'},
+    {name:'SushiGo Salamanca',direccion:'Calle de Serrano, 54, 28006 Madrid',phone:'+34 91 234 56 78'},
+    {name:'SushiGo Vallecas',direccion:'Av. de la Albufera, 120, 28038 Madrid',phone:'+34 91 345 67 89'}
   ];
 
   /* ----------------------------- Estado y persistencia ----------------------------- */
   const STORAGE_KEY = 'sushigo_cart_v1';
-  let cart = loadCart();
-  let weeklyPromo = generateWeeklyPromo(new Date());
+  let carrito = cargarCarrito();
+  let promoSemanal = generarPromoSemanal(new Date());
 
   /* ----------------------------- Inicialización ----------------------------- */
   document.addEventListener('DOMContentLoaded', ()=>{
-    bindTabs();
-    renderTab('menu');
-    renderCartCount();
-    setupCartButtons();
+    bindpestañas();
+    renderpestaña('menu');
+    renderContadorCarrito();
+    setupBotonesCarrito();
   });
 
-  /* ----------------------------- Tabs ----------------------------- */
-  function bindTabs(){
-    document.querySelectorAll('.tab').forEach(btn=>{
+  /* ----------------------------- pestañas ----------------------------- */
+  function bindpestañas(){
+    document.querySelectorAll('.pestaña').forEach(btn=>{
       btn.addEventListener('click', e=>{
-        document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-        btn.classList.add('active');
-        const tab = btn.dataset.tab;
-        renderTab(tab);
+        document.querySelectorAll('.pestaña').forEach(t=>t.classList.remove('activa'));
+        btn.classList.add('activa');
+        const pestaña = btn.dataset.pestaña;
+        renderpestaña(pestaña);
       });
     });
 
-    document.getElementById('open-cart').addEventListener('click', openCart);
-    document.getElementById('close-cart').addEventListener('click', closeCart);
-    document.getElementById('apply-promo').addEventListener('click', ()=>{
-      const code = document.getElementById('promo-input').value.trim();
-      applyPromo(code);
+    document.getElementById('carrito_abierto').addEventListener('click', openCart);
+    document.getElementById('cerrar_carrito').addEventListener('click', cerrarCarrito);
+    document.getElementById('aplicar_promo').addEventListener('click', ()=>{
+      const codigo = document.getElementById('promo-input').value.trim();
+      aplicarPromos(codigo);
     });
     document.getElementById('checkout').addEventListener('click', ()=>{
-      if(cart.items.length === 0) return alert('El carrito está vacío');
+      if(carrito.items.length === 0) return alert('El carrito está vacío');
       // demo: finalizar compra
 	  renderCheckoutForm();
-	  closeCart();
+	  cerrarCarrito();
     });
 
     // close with ESC
-    document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeCart(); });
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape') cerrarCarrito(); });
   }
 
   
-  function renderTab(tab){
+  function renderpestaña(pestaña){
     const main = document.getElementById('main-content');
     main.innerHTML = '';
-    if(tab==='menu') renderMenu(main);
-    else if(tab==='promos') renderPromos(main);
-    else if(tab==='restaurants') renderRestaurants(main);
+    if(pestaña==='menu') renderMenu(main);
+    else if(pestaña==='promos') renderPromos(main);
+    else if(pestaña==='restaurantes') renderRestaurantes(main);
   }
   
   /*...............................Render: Compra-----------------------------*/
@@ -82,15 +82,15 @@
     const main = document.getElementById('main-content');
     main.innerHTML = `
       <h2>Finalizar compra</h2>
-      <form id="delivery-form" class="checkout-form">
-        <label><input type="radio" name="delivery" value="domicilio" checked> Envío a domicilio</label>
-        <div id="address-input">
-          <input type="text" id="shipping-address" placeholder="Introduce tu dirección">
+      <form id="reparto-form" class="checkout-form">
+        <label><input type="radio" name="reparto" value="domicilio" checked> Envío a domicilio</label>
+        <div id="direccion-input">
+          <input type="text" id="envio-direccion" placeholder="Introduce tu dirección">
         </div>
-        <label><input type="radio" name="delivery" value="recogida"> Recogida en restaurante</label>
-        <div id="restaurant-select" style="display:none">
-          <select id="pickup-restaurant">
-            ${RESTAURANTS.map((r,i)=>`<option value="${r.address}">${r.name} - ${r.address}</option>`).join('')}
+        <label><input type="radio" name="reparto" value="recogida"> Recogida en restaurante</label>
+        <div id="restaurante-elegido" style="display:none">
+          <select id="pickup-restaurante">
+            ${restaurantes.map((r,i)=>`<option value="${r.direccion}">${r.name} - ${r.direccion}</option>`).join('')}
           </select>
         </div>
         <button type="submit" class="btn add" style="margin-top:12px">Confirmar pedido</button>
@@ -98,51 +98,52 @@
     `;
 
     // alternar campos según opción
-    main.querySelectorAll('input[name="delivery"]').forEach(r=>{
+    main.querySelectorAll('input[name="reparto"]').forEach(r=>{
       r.addEventListener('change', ()=>{
-        document.getElementById('address-input').style.display = r.value==="domicilio"?"block":"none";
-        document.getElementById('restaurant-select').style.display = r.value==="recogida"?"block":"none";
+        document.getElementById('direccion-input').style.display = r.value==="domicilio"?"block":"none";
+        document.getElementById('restaurante-elegido').style.display = r.value==="recogida"?"block":"none";
       });
     });
 
-    main.querySelector('#delivery-form').addEventListener('submit', e=>{
+    main.querySelector('#reparto-form').addEventListener('submit', e=>{
       e.preventDefault();
-      const mode = main.querySelector('input[name="delivery"]:checked').value;
-      let address = mode==="domicilio" ? document.getElementById('shipping-address').value.trim()
-                                       : document.getElementById('pickup-restaurant').value;
-      if(!address) return alert("Introduce una dirección o selecciona un restaurante");
-      renderOrderTracking(address, mode);
-      cart = {items:[], promoCodeApplied:null};
-      saveCart(); renderCartCount();
+      const modo = main.querySelector('input[name="reparto"]:checked').value;
+      let direccion = modo==="domicilio" ? document.getElementById('envio-direccion').value.trim()
+                                       : document.getElementById('pickup-restaurante').value;
+      if(!direccion) return alert("Introduce una dirección o selecciona un restaurante");
+      renderOrdenSeguimiento(direccion, modo);
+      carrito = {items:[], promoCodeApplied:null};
+      guardarCarrito(); 
+	  renderContadorCarrito();
     });
   }
   
   /*------------------------------Render:seguimiento--------------------------*/
-  function renderOrderTracking(address, mode){
+  function renderOrdenSeguimiento(direccion, modo){
     const main = document.getElementById('main-content');
     main.innerHTML = `
       <h2>Seguimiento de pedido</h2>
-      <p>${mode==="domicilio" ? "Enviado a domicilio:" : "Recogida en:"} <strong>${escapeHtml(address)}</strong></p>
-      <div class="map-container">
+      <p>${modo==="domicilio" ? "Enviado a domicilio:" : "Recogida en:"} <strong>${escapeHtml(direccion)}</strong></p>
+      <div class="map-contenedor">
         <iframe
           width="100%" height="300" style="border:0" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed"></iframe>
+          src="https://www.google.com/maps?q=${encodeURIComponent(direccion)}&output=embed"></iframe>
       </div>
       <div class="order-status">
         <div id="status-text">Preparando pedido...</div>
-        <div class="status-bar"><div id="status-progress"></div></div>
+        <div class="status-bar"><div id="status-progreso"></div></div>
       </div>
     `;
 
     const steps = ["Preparando pedido","Listo para recoger","En reparto","Entregado"];
     let idx = 0;
-    const progress = document.getElementById("status-progress");
+    const progreso = document.getElementById("status-progreso");
     const text = document.getElementById("status-text");
 
     function update(){
       text.textContent = steps[idx];
-      progress.style.width = ((idx+1)/steps.length*100)+"%";
+      progreso.style.width = ((idx+1)/steps.length*100)+"%";
       idx++;
       if(idx<steps.length){ setTimeout(update,60000); } // avanza cada minuto
     }
@@ -154,65 +155,65 @@
   function renderMenu() {
     const main = document.getElementById("main-content");
     main.innerHTML = `
-      <div class="categories">
-        <div class="category-select" data-cat="platos">
+      <div class="categorias">
+        <div class="categoria-elegido" data-cat="platos">
           <img src="imagenes/platos.jpg" alt="Platos">
           <h2>Platos</h2>
         </div>
-        <div class="category-select" data-cat="bebidas">
+        <div class="categoria-elegido" data-cat="bebidas">
           <img src="imagenes/bebidas.jpg" alt="Bebidas">
           <h2>Bebidas</h2>
         </div>
-        <div class="category-select" data-cat="postres">
+        <div class="categoria-elegido" data-cat="postres">
           <img src="imagenes/postres.jpg" alt="Postres">
           <h2>Postres</h2>
         </div>
       </div>
     `; 
-    document.querySelectorAll(".category-select").forEach(div=>{
+    document.querySelectorAll(".categoria-elegido").forEach(div=>{
       div.addEventListener("click",()=>{
         const cat = div.dataset.cat;
-        renderCategory(cat);
+        renderCategoria(cat);
       });
     });
   }
 
-  function renderCategory(cat){
+  function renderCategoria(cat){
     const main = document.getElementById("main-content");
-    main.innerHTML = `<h2>${cat.toUpperCase()}</h2><div id="products"></div>`;
-    const productsEl = document.getElementById("products");
-    const items = PRODUCTS.filter(p=>p.category===cat);
+    main.innerHTML = `<h2>${cat.toUpperCase()}</h2><div id="productos"></div>`;
+    const productsEl = document.getElementById("productos");
+    const items = productos.filter(p=>p.categoria===cat);
     items.forEach(p=>{
-      const card = document.createElement("div");
-      card.className="product-card";
-      card.innerHTML = `
-        <div class="product-thumb">
+      const ficha = document.createElement("div");
+      ficha.className="producto-ficha";
+      ficha.innerHTML = `
+        <div class="producto-thumb">
 			<img src="${p.img}" alt"${p.name}">
 		</div>
 		
-        <div class="product-info">
+        <div class="producto-info">
           <h3>${p.name}</h3>
           <p>${p.desc}</p>
-          <div class="product-meta">
-            <div class="price">€ ${p.price.toFixed(2)}</div>
+          <div class="producto-meta">
+            <div class="precio">€ ${p.precio.toFixed(2)}</div>
             <button class="btn add" data-id="${p.id}">Añadir</button>
           </div>
         </div>`;
-      card.querySelector("button").addEventListener("click",()=>addToCart(p.id));
-      productsEl.appendChild(card);
+      ficha.querySelector("button").addEventListener("click",()=>añadirACarrito(p.id));
+      productsEl.appendChild(ficha);
     });
   }
 
 
   /* ----------------------------- Render: Promociones ----------------------------- */
-  function renderPromos(container){
-    const promo = weeklyPromo;
-    const el = document.createElement('div'); el.className='promo-card';
+  function renderPromos(contenedor){
+    const promo = promoSemanal;
+    const el = document.createElement('div'); el.className='promo-ficha';
     el.innerHTML = `
       <h2>Promoción semanal</h2>
       <p class="muted">Cada semana generamos un código 2x1 válido para un producto aleatorio del carrito. El código cambia los lunes.</p>
       <div style="margin-top:12px">
-        <div class="promo-code" id="promo-code">${promo.code}</div>
+        <div class="promo-codigo" id="promo-codigo">${promo.codigo}</div>
         <div class="muted small" style="margin-top:8px">Válido desde: ${promo.validFrom} hasta ${promo.validTo}</div>
       </div>
       <div style="margin-top:12px">
@@ -222,61 +223,82 @@
 	  <div style="margin-top:12px">
 	          <img src="imagenes/feliz.png" alt="familia feliz" style="margin-left: 110px; width: 800px; height: 296px;">
 	  </div>
-	  
-	  
+	  	  
     `;
-    container.appendChild(el);
+    contenedor.appendChild(el);
     el.querySelector('#copy-promo').addEventListener('click', ()=>{
-      navigator.clipboard?.writeText(promo.code).then(()=>alert('Código copiado'));
+      navigator.clipboard?.writeText(promo.codigo).then(()=>alert('Código copiado'));
     });
   }
 
   /* ----------------------------- Render: Restaurantes ----------------------------- */
-  function renderRestaurants(container){
-    const wrapper = document.createElement('div'); wrapper.className='restaurants';
-    RESTAURANTS.forEach(r=>{
-      const d = document.createElement('div'); d.className='restaurant';
-      d.innerHTML = `<h3>${escapeHtml(r.name)}</h3><div class="muted">${escapeHtml(r.address)}</div><div style="margin-top:8px"><a href="tel:${r.phone}" class="small">${escapeHtml(r.phone)}</a></div>`;
+  function renderRestaurantes(contenedor){
+    const wrapper = document.createElement('div'); wrapper.className='restaurantes';
+    restaurantes.forEach(r=>{
+      const d = document.createElement('div'); d.className='restaurante';
+      d.innerHTML = `<h3>${escapeHtml(r.name)}</h3><div class="muted">${escapeHtml(r.direccion)}</div><div style="margin-top:8px"><a href="tel:${r.phone}" class="small">${escapeHtml(r.phone)}</a></div>`;
       wrapper.appendChild(d);
     });
-    container.appendChild(wrapper);
+    contenedor.appendChild(wrapper);
   }
 
   /* ----------------------------- Carrito ----------------------------- */
-  function setupCartButtons(){ renderCartItems(); }
+  function setupBotonesCarrito(){ renderElementosCarrito(); }
 
   function openCart(){
-    const drawer = document.getElementById('cart-drawer'); drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); document.getElementById('open-cart').setAttribute('aria-expanded','true');
-    renderCartItems();
+    const drawer = document.getElementById('carrito-drawer'); 
+	drawer.classList.add('open'); 
+	drawer.setAttribute('aria-hidden','false'); 
+	document.getElementById('carrito_abierto').setAttribute('aria-expanded','true');
+    renderElementosCarrito();
   }
-  function closeCart(){
-    const drawer = document.getElementById('cart-drawer'); drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); document.getElementById('open-cart').setAttribute('aria-expanded','false');
+  function cerrarCarrito(){
+    const drawer = document.getElementById('carrito-drawer'); 
+	drawer.classList.remove('open'); 
+	drawer.setAttribute('aria-hidden','true'); 
+	document.getElementById('carrito_abierto').setAttribute('aria-expanded','false');
   }
 
-  function addToCart(productId){
-    const item = cart.items.find(i=>i.productId===productId);
-    if(item) item.qty++;
-    else cart.items.push({productId, qty:1});
-    saveCart(); renderCartCount();
+  function añadirACarrito(productId){
+    const item = carrito.items.find(i=>i.productId===productId);
+    if(item){ item.qty++;}
+    else{carrito.items.push({productId, qty:1})};
+    guardarCarrito(); renderContadorCarrito();
   }
 
-  function removeFromCart(productId){ cart.items = cart.items.filter(i=>i.productId!==productId); if(cart.items.length===0) cart.promoCodeApplied=null; saveCart(); renderCartCount(); renderCartItems(); }
-  function updateQty(productId, qty){ qty = Math.max(0, Math.floor(qty)); if(qty===0) return removeFromCart(productId); const it = cart.items.find(i=>i.productId===productId); if(it){ it.qty = qty; saveCart(); renderCartCount(); renderCartItems(); } }
+  function removerDeCarrito(productId){ 
+		carrito.items = carrito.items.filter(i=>i.productId!==productId);
+		if(carrito.items.length===0) carrito.promoCodeApplied=null; 
+		guardarCarrito(); 
+		renderContadorCarrito(); 
+		renderElementosCarrito(); 
+  }
+  
+  function updateQty(productId, qty){ 
+		qty = Math.max(0, Math.floor(qty)); if(qty===0) return removerDeCarrito(productId); 
+		const it = carrito.items.find(i=>i.productId===productId); 
+			if(it){ 
+				it.qty = qty; 
+				guardarCarrito(); 
+				renderContadorCarrito(); 
+				renderElementosCarrito(); 
+			} 
+		}
 
-  function renderCartCount(){ const count = cart.items.reduce((s,i)=>s+i.qty,0); document.getElementById('cart-count').textContent = count; document.getElementById('cart-empty-hint').textContent = count===0? 'Vacío' : `${count} producto(s)`; }
+  function renderContadorCarrito(){ const contador = carrito.items.reduce((s,i)=>s+i.qty,0); document.getElementById('contador_carrito').textContent = contador; document.getElementById('carrito_vacio').textContent = contador===0? 'Vacío' : `${contador} producto(s)`; }
 
-  function renderCartItems(){
-    const list = document.getElementById('cart-items'); list.innerHTML = '';
-    if(cart.items.length===0){ list.innerHTML='<div class="muted">No has añadido productos</div>'; updateTotals(); return; }
+  function renderElementosCarrito(){
+    const list = document.getElementById('productos_carrito'); list.innerHTML = '';
+    if(carrito.items.length===0){ list.innerHTML='<div class="muted">No has añadido productos</div>'; updateTotals(); return; }
 
-    cart.items.forEach(it=>{
-      const p = findProduct(it.productId);
-      const node = document.createElement('div'); node.className='cart-item';
+    carrito.items.forEach(it=>{
+      const p = encontrarProducto(it.productId);
+      const node = document.createElement('div'); node.className='carrito-elemento';
       node.innerHTML = `
         <div style="width:56px;height:48px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center">${svgThumb(p.name)}</div>
         <div style="flex:1">
           <div style="font-weight:700">${escapeHtml(p.name)}</div>
-          <div class="muted small">€ ${p.price.toFixed(2)}</div>
+          <div class="muted small">€ ${p.precio.toFixed(2)}</div>
           <div class="qty" style="margin-top:8px;display:flex;gap:6px;align-items:center">
             <button class="btn" data-action="dec" aria-label="disminuir">−</button>
             <input type="number" min="1" value="${it.qty}" style="width:56px;padding:6px;border-radius:8px;border:1px solid rgba(0,0,0,0.08)" data-id="${it.productId}">
@@ -288,7 +310,7 @@
       // actions
       node.querySelector('[data-action="dec"]').addEventListener('click', ()=>{ updateQty(it.productId, it.qty-1); });
       node.querySelector('[data-action="inc"]').addEventListener('click', ()=>{ updateQty(it.productId, it.qty+1); });
-      node.querySelector('[data-action="remove"]').addEventListener('click', ()=>{ removeFromCart(it.productId); });
+      node.querySelector('[data-action="remove"]').addEventListener('click', ()=>{ removerDeCarrito(it.productId); });
       node.querySelector('input[type=number]').addEventListener('change', e=>{ const v = parseInt(e.target.value||0); updateQty(it.productId, v); });
 
       list.appendChild(node);
@@ -298,54 +320,58 @@
 
   function updateTotals(){
     const totals = calculateTotals();
-    document.getElementById('cart-subtotal').textContent = totals.subtotal.toFixed(2);
-    document.getElementById('cart-discount').textContent = totals.discount.toFixed(2);
-    document.getElementById('cart-total').textContent = totals.total.toFixed(2);
-    document.getElementById('promo-feedback').textContent = cart.promoCodeApplied? `Promoción aplicada: ${cart.promoCodeApplied}` : '';
+    document.getElementById('carrito_subtotal').textContent = totals.subtotal.toFixed(2);
+    document.getElementById('carrito-discontador').textContent = totals.discontador.toFixed(2);
+    document.getElementById('carrito_total').textContent = totals.total.toFixed(2);
+    document.getElementById('promo-feedback').textContent = carrito.promoCodeApplied? `Promoción aplicada: ${carrito.promoCodeApplied}` : '';
   }
 
   function calculateTotals(){
     let subtotal = 0;
-    cart.items.forEach(it=>{ const p = findProduct(it.productId); subtotal += p.price * it.qty; });
-    let discount = 0;
-    if(cart.promoCodeApplied && cart.promoCodeApplied === weeklyPromo.code){
+    carrito.items.forEach(it=>{ const p = encontrarProducto(it.productId); subtotal += p.precio * it.qty; });
+    let discontador = 0;
+    if(carrito.promoCodeApplied && carrito.promoCodeApplied === promoSemanal.codigo){
       // aplicar 2x1 a un producto aleatorio dentro del carrito
-      if(cart.items.length>0){
+      if(carrito.items.length>0){
         // Elige producto aleatorio entre los que haya en el carrito
-        const idx = seededRandomIndex(cart.items.length, weeklyPromo.seedBase);
-        const chosen = cart.items[idx];
-        const product = findProduct(chosen.productId);
+        const idx = seededRandomIndex(carrito.items.length, promoSemanal.seedBase);
+        const chosen = carrito.items[idx];
+        const producto = encontrarProducto(chosen.productId);
         // calculamos pares
         const pairs = Math.floor(chosen.qty / 2);
-        discount = pairs * product.price;
+        discontador = pairs * producto.precio;
       }
     }
-    const total = Math.max(0, subtotal - discount);
-    return {subtotal, discount, total};
+    const total = Math.max(0, subtotal - discontador);
+    return {subtotal, discontador, total};
   }
 
-  function applyPromo(code){
-    if(!code){ alert('Introduce un código'); return; }
-    if(code === weeklyPromo.code && isPromoValid(weeklyPromo)){
-      cart.promoCodeApplied = code; saveCart(); renderCartItems(); updateTotals(); alert('Promoción aplicada. Se aplicará el 2x1 al producto aleatorio del carrito.');
+  function aplicarPromos(codigo){
+    if(!codigo){ alert('Introduce un código'); return; }
+    if(codigo === promoSemanal.codigo && promoValida(promoSemanal)){
+      carrito.promoCodeApplied = codigo; 
+	  guardarCarrito(); 
+	  renderElementosCarrito(); 
+	  updateTotals(); 
+	  alert('Promoción aplicada. Se aplicará el 2x1 al producto aleatorio del carrito.');	  
     } else {
       alert('Código inválido o caducado');
     }
   }
 
-  /* ----------------------------- Promoción semanal (estable por semana) ----------------------------- */
-  function generateWeeklyPromo(date){
+  /* ----------------------------- Promoción semanal (espestañale por semana) ----------------------------- */
+  function generarPromoSemanal(date){
     // ISO week + simple seed
     const iso = isoWeekYear(date);
     const seedBase = iso.week + '-' + iso.year;
     const short = b64random(seedBase).slice(0,4).toUpperCase();
-    const code = `2X1-${iso.year}W${String(iso.week).padStart(2,'0')}-${short}`;
+    const codigo = `2X1-${iso.year}W${String(iso.week).padStart(2,'0')}-${short}`;
     const from = iso.monday;
     const to = iso.sunday;
-    return {code, validFrom: formatDate(from), validTo: formatDate(to), seedBase};
+    return {codigo, validFrom: formatDate(from), validTo: formatDate(to), seedBase};
   }
 
-  function isPromoValid(promo){
+  function promoValida(promo){
     const today = new Date();
     const from = new Date(promo.validFrom);
     const to = new Date(promo.validTo);
@@ -353,14 +379,14 @@
   }
 
   /* ----------------------------- Utilidades ----------------------------- */
-  function loadCart(){
+  function cargarCarrito(){
     try{ const raw = localStorage.getItem(STORAGE_KEY); return raw? JSON.parse(raw) : {items:[], promoCodeApplied:null}; }catch(e){ return {items:[], promoCodeApplied:null}; }
   }
-  function saveCart(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(cart)); }
+  function guardarCarrito(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(carrito)); }
 
-  function findProduct(id){ return PRODUCTS.find(p=>p.id===id) || {name:'Desconocido', price:0}; }
+  function encontrarProducto(id){ return productos.find(p=>p.id===id) || {name:'Desconocido', precio:0}; }
 
-  function groupBy(arr, fn){ return arr.reduce((acc,x)=>{ const k = fn(x); (acc[k] = acc[k]||[]).push(x); return acc; }, {}); }
+  function agruparPor(arr, fn){ return arr.reduce((acc,x)=>{ const k = fn(x); (acc[k] = acc[k]||[]).push(x); return acc; }, {}); }
 
   function escapeHtml(str){ return String(str).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'); }
 
@@ -379,6 +405,7 @@
   function b64random(s){ // base64-ish short
     const h = cyrb53(s); return btoa(String(h)).replace(/=+$/,'');
   }
+  
   function cyrb53(str, seed = 0) {
     let h1 = 0xDEADBEEF ^ seed, h2 = 0x41C6CE57 ^ seed;
     for (let i = 0, ch; i < str.length; i++) {
@@ -411,5 +438,5 @@
 
   function formatDate(d){ return d.toISOString().slice(0,10); }
 
-  /* ----------------------------- Pequeña semilla para elegir aleatorio estable ----------------------------- */
-  // seededRandomIndex uses cyrb53 on the seedBase and cart content; but we keep it simple above
+ 
+ 

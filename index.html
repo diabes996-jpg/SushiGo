@@ -1,94 +1,112 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SushiGo • Pide sushi a domicilio</title>
-  <meta name="description" content="Tienda de reparto de sushi - demo funcional con carrito, promociones 2x1 semanales y persistencia en localStorage." />
-  
-  <script src="js/mis_funciones.js"></script>
-  <link rel="stylesheet" href="estilos/styles.css">
-  <link rel="icon" type="image/png" href="imagenes/Logo.png">
-  
-</head>
+	<head>
+	  <meta charset="utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <title>SushiGo • Pide sushi a domicilio</title>
+	  <meta name="description" content="Tienda de reparto de sushi - demo funcional con carrito, promociones 2x1 semanales y persistencia en localStorage." />
+	  
+	  <script src="js/mis_funciones.js"></script>
+	  <link rel="stylesheet" href="estilos/styles.css">
+	  <link rel="icon" type="image/png" href="imagenes/Logo.png">
+	  
+	</head>
+	
+	<body>
+	
+	  <div class="contenedor">
+	  
+	    <header class="site-header" role="banner">
+	    
+	      <div class="marca">
+	        <div class="logo-sq" aria-hidden="true">
+	          <img src="imagenes/Logo.png" alt="logo">
+	      </div>
+	        
+	      <div>
+	          <h1>SushiGo</h1>
+	          <div class="muted small">Sushi a domicilio • Madrid</div>
+	        </div>
+	      </div>
+	
+	      <nav class="main-nav" role="navigation" aria-label="Menú principal">
+	        <button class="pestaña activa" data-pestaña="menu">Menú</button>
+	        <button class="pestaña" data-pestaña="promos">Promociones</button>
+	        <button class="pestaña" data-pestaña="restaurantes">Restaurantes</button>
+	        <button id="carrito_abierto" aria-haspopup="dialog" aria-expanded="false">
+	          Carrito <span class="contador" id="contador_carrito">0</span>
+	        </button>
+	      </nav>
+	      
+	    </header>
+	
+	    <main id="main-content" class="main-content" role="main">
+	      <!-- Render de todo aqui -->
+	    </main>
+	
+	    <aside id="carrito-drawer" class="carrito-drawer" aria-hidden="true" role="dialog" aria-label="Carrito de compra">
+	    
+	      <div class="carrito-header">      
+	        <div>
+	          <strong>Tu carrito</strong>
+	          <div class="muted small" id="carrito_vacio">Vacío</div>
+	        </div>
+	        
+	        <div><button id="cerrar_carrito" aria-label="Cerrar carrito">✕</button></div>
+	      </div>
+	
+	      <div class="productos_carrito" id="productos_carrito"></div>
+	
+	      <div class="promo-row">      
+	        <input type="text" id="promo-input" placeholder="Código promo" aria-label="Código promocional">
+	        <button id="aplicar_promo" class="btn">Aplicar</button>
+	      </div>
+	      
+	      <div id="promo-feedback" class="muted small" style="margin-top:6px"></div>
+	
+	      <div class="carrito-footer">
+	        <div class="resumen_pedido">
+	          <div class="small">Subtotal:</div>
+	          <div class="small">€ <span id="carrito_subtotal">0.00</span></div>
+	        </div>
+	        
+	        <div class="resumen_pedido">
+	          <div class="small">Descuento:</div>
+	          <div class="small">- € <span id="carrito-discontador">0.00</span></div>
+	        </div>
+	        
+	        <div class="resumen_pedido" style="font-weight:800;font-size:18px">
+	          <div>Total:</div>
+	          <div>€ <span id="carrito_total">0.00</span></div>
+	        </div>
+	        
+	        <div style="margin-top:8px">
+	          <button id="checkout" class="btn add" style="width:100%">Finalizar compra</button>
+	        </div>
+	        
+	      </div>
+	      
+	    </aside>
+	
+	    <footer class="site-footer" role="contentinfo">
+	    
+	      <div>
+	        <div><strong>SushiGo S.L.</strong></div>
+	        <div class="muted small">CIF: B12345678 • Calle Ejemplo, Madrid</div>
+	      </div>
+	      
+	      <div class="redes_sociales">
+	        <a aria-label="TikTok" href="https://www.tiktok.com"><img src="imagenes/rrss/tiktok.jpg" alt="TikTok"></a>
+	        <a aria-label="Instagram" href="https://www.instagram.com"><img src="imagenes/rrss/instagram.jpg" alt="Instagram"></a>
+	        <a aria-label="Facebook" href="https://www.facebook.com"><img src="imagenes/rrss/fb.jpg" alt="Facebook"></a>
+	        <a aria-label="Youtube" href="https://www.youtube.com"><img src="imagenes/rrss/yt.jpg" alt="Youtube"></a>
+	        <a aria-label="Twitter" href="https://x.com"><img src="imagenes/rrss/twitter.jpg" alt="Twitter"></a>
+	      </div>
+	      
+	    </footer>
+	    
+	  </div>
+	  
+	</body>
 
-<body>
-
-  <div class="container">
-    <header class="site-header" role="banner">
-      <div class="brand">
-        <div class="logo-sq" aria-hidden="true">
-          <img src="imagenes/Logo.png" alt="logo">
-        </div>
-        <div>
-          <h1>SushiGo</h1>
-          <div class="muted small">Sushi a domicilio • Madrid</div>
-        </div>
-      </div>
-
-      <nav class="main-nav" role="navigation" aria-label="Menú principal">
-        <button class="tab active" data-tab="menu">Menú</button>
-        <button class="tab" data-tab="promos">Promociones</button>
-        <button class="tab" data-tab="restaurants">Restaurantes</button>
-        <button id="open-cart" aria-haspopup="dialog" aria-expanded="false">
-          Carrito <span class="count" id="cart-count">0</span>
-        </button>
-      </nav>
-    </header>
-
-    <main id="main-content" class="main-content" role="main">
-      <!-- Render de todo aqui -->
-    </main>
-
-    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-label="Carrito de compra">
-      <div class="cart-header">
-        <div>
-          <strong>Tu carrito</strong>
-          <div class="muted small" id="cart-empty-hint">Vacío</div>
-        </div>
-        <div><button id="close-cart" aria-label="Cerrar carrito">✕</button></div>
-      </div>
-
-      <div class="cart-items" id="cart-items"></div>
-
-      <div class="promo-row">
-        <input type="text" id="promo-input" placeholder="Código promo" aria-label="Código promocional">
-        <button id="apply-promo" class="btn">Aplicar</button>
-      </div>
-      <div id="promo-feedback" class="muted small" style="margin-top:6px"></div>
-
-      <div class="cart-footer">
-        <div class="cart-summary">
-          <div class="small">Subtotal:</div>
-          <div class="small">€ <span id="cart-subtotal">0.00</span></div>
-        </div>
-        <div class="cart-summary">
-          <div class="small">Descuento:</div>
-          <div class="small">- € <span id="cart-discount">0.00</span></div>
-        </div>
-        <div class="cart-summary" style="font-weight:800;font-size:18px">
-          <div>Total:</div>
-          <div>€ <span id="cart-total">0.00</span></div>
-        </div>
-        <div style="margin-top:8px">
-          <button id="checkout" class="btn add" style="width:100%">Finalizar compra</button>
-        </div>
-      </div>
-    </aside>
-
-    <footer class="site-footer" role="contentinfo">
-      <div>
-        <div><strong>SushiGo S.L.</strong></div>
-        <div class="muted small">CIF: B12345678 • Calle Ejemplo, Madrid</div>
-      </div>
-      <div class="social-icons">
-        <a aria-label="TikTok" href="https://www.tiktok.com"><img src="imagenes/rrss/tiktok.jpg" alt="TikTok"></a>
-        <a aria-label="Instagram" href="https://www.instagram.com"><img src="imagenes/rrss/instagram.jpg" alt="Instagram"></a>
-        <a aria-label="Facebook" href="https://www.facebook.com"><img src="imagenes/rrss/fb.jpg" alt="Facebook"></a>
-        <a aria-label="Youtube" href="https://www.youtube.com"><img src="imagenes/rrss/yt.jpg" alt="Youtube"></a>
-        <a aria-label="Twitter" href="https://x.com"><img src="imagenes/rrss/twitter.jpg" alt="Twitter"></a>
-      </div>
-    </footer>
-  </div>
-</body>
 </html>
