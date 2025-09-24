@@ -3,7 +3,7 @@
       --blanco: #ffffff;
       --amarillo: #f5e27a; 
       --texto: #222;
-      --fondo: rgba(255,247,240,0.6);
+      --fondo: rgba(255,247,240,0.8);
       --accent-dark: #8b0000;
       --ficha-bg: #ffffff;
       --max-width: 1100px;
@@ -24,9 +24,8 @@
 		background-position: center center;  
 		background-attachment:fixed;  			
 		background-size: cover;
-		position: relative;	
-			
-    }
+		position: relative;					
+  		}
     
     body{
 		height:100%;
