@@ -55,8 +55,7 @@
     	display:grid;
     	grid-template-columns: 1fr 1fr;		
 		grid-template-rows: auto;						
-		grid-gap: 250px;
-		height:	auto;
+		grid-gap: 250px;		
     	}
     	
     .marca{
