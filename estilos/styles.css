@@ -30,7 +30,7 @@
     body{
 		height:100%;
 		margin:0;
-		font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+		font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
 		color:var(--texto);
 		background:var(--fondo);				
 		}				
@@ -55,7 +55,8 @@
     	display:grid;
     	grid-template-columns: 1fr 1fr;		
 		grid-template-rows: auto;						
-		grid-gap: 250px;		
+		grid-gap: 250px;
+		max-height: 100px;		
     	}
     	
     .marca{
